@@ -1,11 +1,6 @@
 # Utilities for interacting with Jira
 
-import logging
-
 from jira import JIRA
-
-# create a connection object, jc
-#jc = connect_jira("url", "username", "api token")
 
 
 class JiraClient(object):
@@ -21,12 +16,15 @@ class JiraClient(object):
 
         try:
             self.jira = JIRA(
-                options={"server": self.server, 'verify': False},
-                basic_auth=(user, password)
+                options={"server": self.server,
+                         "verify": False},
+                basic_auth=(user, password),
+                verify=False
             )
         except Exception as e:
             print("Failed to connect to JIRA.. Error {}".format(
                 str(e)))
+            exit(1)
         else:
             return True
 
@@ -37,4 +35,4 @@ class JiraClient(object):
           'project': ''
         }
         """
-        pass
+        return self.jira.create_issue(fields=issue)
