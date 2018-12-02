@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script type='text/javascript'
+  src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){<!--from  w w w .java 2 s . c  om-->
+    $('.myDropdownHandle').dropdown('toggle');
+});
+</script>  
+
+<style>
+body {
+    background-color:lightblue;
+}
+
+.center {
+    margin: auto;
+    width: 100%;
+    border: 4px solid black;
+    padding: 100px;
+}
+</style>
+
+</head>
+  <body style='margin:30px'>
+   <div class="center">
+    <form  class="form-horizontal">
+               
+        <div class="form-group">
+          <h2> &nbsp <b>Create Issue</b></h2>
+        </div>
+        <br/>
+        <div class="form-group">
+            <label  for="project" class="col-xs-2">Project* </label>
+            <div class="col-xs-3">
+    	   	 <select class="form-control" id="project">
+     		 	<option> ISG DBA DevOps (IDD) </option>
+    		 </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label  for="story" class="col-xs-2">Issue Type* </label>
+            <div class="col-xs-3">
+    	   	 <select class="form-control" id="story">
+     		 	<option> Story </option>
+    		 </select>
+            </div>
+        </div>
+
+        <div class="form-group has-error">
+            <label  for="summary" class="col-xs-2"> Summary* </label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" id="summary" placeholder="Summary" required/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label  for="component" class="col-xs-2">Component/s </label>
+            <div class="col-xs-3">
+    	   	 <select class="form-control" id="component">
+     		 	<option> Product Backlog </option>
+    		 </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label  for="priority" class="col-xs-2">Priority </label>
+            <div class="col-xs-3">
+    	   	 <select class="form-control" id="priority">
+     		 	<option> Blocker </option>
+			<option> Critical </option>
+			<option> Minor </option>
+			<option> Trivial </option>
+    		 </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label  for="description" class="col-xs-2">Description</label>
+            <div class="col-xs-10">
+                <textarea class="form-control" id="description" placeholder="Your Comments"></textarea>
+            </div>
+        </div>
+        <div class="col-xs-10 col-xs-offset-10">
+            <button type="submit" class="btn btn-primary">Create </button>
+	    <a href="/link-to/whatever-address/" id="cancel" name="cancel" class="btn btn-default">Cancel</a>
+        </div>
+    </form>
+   </div>
+  </body>
+</html>
