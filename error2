@@ -1,0 +1,17 @@
+ PYTHONSSLVERIFY=False
++ python flask_oauth.py
+Traceback (most recent call last):
+  File "flask_oauth.py", line 54, in <module>
+    resp, content = client.request(data_url, "GET")
+  File "/usr/lib/python2.7/site-packages/oauth2/__init__.py", line 685, in request
+    connection_type=connection_type)
+  File "/usr/lib/python2.7/site-packages/httplib2/__init__.py", line 1621, in request
+    (response, content) = self._request(conn, authority, uri, request_uri, method, body, headers, redirections, cachekey)
+  File "/usr/lib/python2.7/site-packages/httplib2/__init__.py", line 1363, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+  File "/usr/lib/python2.7/site-packages/httplib2/__init__.py", line 1284, in _conn_request
+    conn.connect()
+  File "/usr/lib/python2.7/site-packages/httplib2/__init__.py", line 1071, in connect
+    raise SSLHandshakeError(e)
+httplib2.SSLHandshakeError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:618)
+Build step 'Execute shell' marked build as failure
